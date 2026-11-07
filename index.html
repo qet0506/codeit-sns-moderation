@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>첫 HTML 페이지</title>
+<style>
+body { margin:0; min-height:100vh; display:grid; place-items:center; background:#f2f5fa; font-family:system-ui,sans-serif; color:#192638; }
+main { background:white; padding:48px 32px; border-radius:24px; text-align:center; width:min(420px,80vw); box-shadow:0 12px 40px #19263812; }
+h1 { font-size:36px; margin:0 0 16px; }
+p { line-height:1.7; color:#526174; }
+button { background:#285bea; color:white; border:0; border-radius:12px; padding:14px 24px; font:inherit; cursor:pointer; }
+button:focus-visible { outline:3px solid #91b3ff; outline-offset:4px; }
+#message { min-height:28px; }
+</style>
+</head>
+<body>
+<main>
+<h1>안녕하세요!</h1>
+<p>노트북에서 만든 첫 HTML 페이지입니다.<br>아래 버튼을 눌러보세요.</p>
+<button id="hello" type="button">인사하기</button>
+<p id="message" role="status" aria-live="polite"></p>
+</main>
+<script>
+let count = 0;
+document.getElementById('hello').addEventListener('click', () => {
+  count += 1;
+  document.getElementById('message').textContent = `반갑습니다! 버튼을 ${count}번 누르셨습니다.`;
+});
+</script>
+</body>
+</html>
