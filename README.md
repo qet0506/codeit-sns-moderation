@@ -27,7 +27,6 @@ WHERE created_at >= '2023-05-04 00:00:00'
 | `accounts_user` | 유저 정보 | `is_superuser = 0`, `is_staff = 0` |
 | `accounts_school` | 학교 정보 | 전체 조회 |
 | `accounts_group` | 학급과 학교 연결 정보 | 전체 조회 |
-| `accounts_attendance` | 유저별 출석 날짜 목록 | 전체 조회 |
 | `accounts_paymenthistory` | 상품 구매 기록 | 전체 조회 후 분석별 기간 적용 |
 
 - `accounts_user`는 이전 가입자의 활동 기록에도 유저 정보를 연결할 수 있도록 가입일 제한 없이 조회한다.
